@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Todo item styling */
+  .todo-item {
+    @apply flex items-center gap-3 bg-gray-50 p-3 rounded-lg shadow-md;
+  }
+
+  /* Deadline styling for date and time */
+  .deadline {
+    @apply text-sm text-gray-500 ml-3 p-2 rounded-md bg-purple-100 border border-purple-300 flex items-center gap-2;
+  }
+
+  .deadline-date {
+    @apply text-sm font-medium text-gray-700;
+  }
+
+  .deadline-time {
+    @apply text-sm font-medium text-gray-700;
+  }
+
+  .deadline .ml-1 {
+    @apply mx-1;
+  }
+
+  /* Completed task styling */
+  .completed {
+    @apply line-through text-gray-400;
+  }
+
+  /* Todo checkbox styles */
+  .todo-checkbox {
+    @apply w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors duration-200;
+  }
+
+  .todo-checkbox-checked {
+    @apply border-purple-500 bg-purple-500;
+  }
+
+  .todo-checkbox-unchecked {
+    @apply border-gray-300;
+  }
+
+  /* Add button styling */
+  .add-btn {
+    @apply bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 transition-colors duration-200 flex items-center gap-2;
+  }
+
+  /* General input field styling */
+  input[type="text"],
+  input[type="datetime-local"] {
+    @apply px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500;
+  }
+
+  /* Edit input fields styling */
+  input[type="text"]:focus,
+  input[type="datetime-local"]:focus {
+    @apply border-purple-500;
+  }
+
+  /* Todo card container styling */
+  .todo-card {
+    @apply flex justify-between items-center gap-3 bg-gray-50 p-3 rounded-lg shadow-md mb-3;
+  }
+
+  /* Edit pencil and delete trash icon styling */
+  .edit-delete-icons {
+    @apply flex gap-2;
+  }
+
+  .edit-delete-icons button {
+    @apply text-gray-500 hover:text-purple-500 transition-colors duration-200;
+  }
+
+  /* Empty todos message styling */
+  .empty-todos {
+    @apply text-center text-gray-500 mt-6;
+  }
+
+  /* Heading styling */
+  .todo-heading {
+    @apply text-3xl font-bold text-gray-800 mb-8 text-center;
+  }
+
+  /* Ensure form is contained within the card and doesn't overflow */
+  form {
+    @apply mb-6 flex gap-3 items-center;
+  }
+
+  /* Fix the Add button inside the card */
+  .add-btn-container {
+    @apply flex justify-between gap-3 w-full;
+  }
+}
